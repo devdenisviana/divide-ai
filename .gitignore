@@ -13,3 +13,12 @@
 .externalNativeBuild
 .cxx
 local.properties
+# Arquivos de publicação e chaves (nunca enviar ao GitHub)
+*.aab
+*.apk
+*.jks
+*.keystore
+app/release/
+# Arquivos do Android Studio e do compilador Kotlin
+.idea/
+.kotlin/
