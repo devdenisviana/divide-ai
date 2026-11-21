@@ -1,5 +1,6 @@
 package com.devdenisviana.divideai
 
+import android.content.Intent
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -21,6 +22,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.key
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 
@@ -29,6 +31,8 @@ fun TelaConsumo(
     viewModel: ConsumoViewModel,
     modifier: Modifier = Modifier
 ) {
+    val contexto = LocalContext.current
+
     Column(
         modifier = modifier
             .fillMaxSize()
@@ -122,6 +126,35 @@ fun TelaConsumo(
                     color = MaterialTheme.colorScheme.secondary
                 )
             }
+
+            Button(
+                onClick = {
+                    val resumo = buildString {
+                        appendLine("Divide Aí 🍻")
+                        appendLine(
+                            "Conta com gorjeta: ${formatarReais(resultado.totalComGorjeta)} " +
+                                    "(gorjeta de ${viewModel.gorjeta}%)"
+                        )
+                        if (resultado.diferenca > 0) {
+                            appendLine(
+                                "Itens compartilhados: ${formatarReais(resultado.diferenca)} " +
+                                        "(dividido igualmente)"
+                            )
+                        }
+                        viewModel.pessoas.forEachIndexed { indice, pessoa ->
+                            appendLine(
+                                "${pessoa.nome}: ${formatarReais(resultado.valoresPorPessoa[indice])}"
+                            )
+                        }
+                    }.trim()
+                    val envio = Intent(Intent.ACTION_SEND).apply {
+                        type = "text/plain"
+                        putExtra(Intent.EXTRA_TEXT, resumo)
+                    }
+                    contexto.startActivity(Intent.createChooser(envio, "Compartilhar resumo"))
+                },
+                enabled = resultado.totalComGorjeta > 0
+            ) { Text("Compartilhar resumo") }
         }
     }
 }
