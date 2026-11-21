@@ -26,6 +26,9 @@ import androidx.compose.material3.FilterChip
 import androidx.compose.material3.FilterChipDefaults
 import android.content.Intent
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.foundation.layout.imePadding
 
 fun textoParaCentavos(texto: String): Long {
     val partes = texto.split(",")
@@ -45,7 +48,11 @@ fun TelaDivisao(modifier: Modifier = Modifier) {
     val contexto = LocalContext.current
 
     Column(
-        modifier = modifier.fillMaxSize().padding(24.dp),
+        modifier = modifier
+            .fillMaxSize()
+            .imePadding()
+            .verticalScroll(rememberScrollState())
+            .padding(24.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
         Text(
