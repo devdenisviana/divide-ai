@@ -6,23 +6,33 @@ Divide Aí: Racha a Conta
 
 ## Descrição curta (máx. 80 caracteres)
 
-Divida a conta do bar com gorjeta e envie o resumo no WhatsApp.
+Divida a conta do bar por igual ou por consumo e envie o resumo no WhatsApp.
 
 ## Descrição completa
 
 Dividir a conta do bar nunca mais vai virar discussão.
 
-Com o Divide Aí, você digita o valor da conta, escolhe quantas pessoas vão dividir e qual a gorjeta. Em um instante o app mostra o total e quanto cada um paga.
+Com o Divide Aí, você escolhe como quer dividir: por igual, quando todo mundo paga o mesmo, ou por consumo, quando cada um paga o que realmente consumiu. Em um instante o app mostra o total com gorjeta e quanto cada pessoa paga.
 
-COMO FUNCIONA
+DIVIDIR POR IGUAL
 • Digite o valor da conta
 • Escolha de 1 a 50 pessoas
 • Selecione a gorjeta: 0%, 10%, 12% ou 15%
 • Veja quanto cada pessoa paga, incluindo os centavos que sobram
+
+DIVIDIR POR CONSUMO
+• Digite o total da conta e o que cada pessoa consumiu
+• Dê um nome para cada pessoa, para ficar fácil de conferir
+• Os itens compartilhados (a diferença entre o total e a soma dos consumos) são divididos igualmente
+• A gorjeta é proporcional ao que cada um consumiu
+• Os centavos fecham exatamente com o total da conta
+
+NOS DOIS MODOS
 • Toque em "Compartilhar resumo" e envie para o grupo do WhatsApp
+• Volte para a tela inicial a qualquer momento para trocar de modo
 
 POR QUE USAR
-• Simples e rápido: tudo em uma única tela
+• Simples e rápido
 • Funciona sem internet
 • Sem anúncios
 • Não coleta nenhum dado pessoal
@@ -44,4 +54,4 @@ Ideal para bar, restaurante, churrasco e viagens com amigos.
 
 - Ícone: `app/src/main/ic_launcher-playstore.png` (512×512)
 - Imagem de destaque: `docs/feature_graphic_1024x500.png`
-- Capturas de tela: `docs/tela-principal.png`, `docs/tela-2.png`, `docs/tela-3.png`, `docs/tela-4.png`
+- Capturas de tela: `docs/tela-inicio.png`, `docs/tela-principal.png`, `docs/tela-consumo.png`, `docs/tela-consumo-resultado.png`
