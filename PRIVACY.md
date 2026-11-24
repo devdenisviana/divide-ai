@@ -1,12 +1,12 @@
 # Política de Privacidade: Divide Aí
 
-Última atualização: 21 de novembro de 2026
+Última atualização: 24 de novembro de 2026
 
 O Divide Aí é um aplicativo para dividir a conta do bar ou do churrasco entre amigos.
 
 ## Dados coletados
 
-O aplicativo **não coleta, não envia e não compartilha dados pessoais**. Os valores digitados (conta, número de pessoas e gorjeta) ficam apenas no seu aparelho e não saem dele.
+O aplicativo **não coleta, não envia e não compartilha dados pessoais**. Os valores e nomes digitados (conta, consumo de cada pessoa, número de pessoas e gorjeta) ficam apenas no seu aparelho e não saem dele.
 
 ## Permissões
 
